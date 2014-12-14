@@ -1,22 +1,23 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Dec 11 01:42:08 2014
+class TreeNode:
+     def __init__(self, x):
+         self.val = x
+         self.left = None
+         self.right = None
 
-@author: praneethpuligundla
-"""
+class binarytree:
+    def binarytree(self,root):
+        
+    
+
 
 class Solution:
-    # @param s, a string
-    # @return a string
-    def reverseWords(self, s):
-        if(s.strip()==" "):
-            return ""
-        else:
-            s=s.strip()
-            s=re.sub('[ ]+'," ",s)
-            s=s.split(" ")
-            str=""
-            for each in s:
-                str+=each[::-1]+" "
-            str=str.strip()
-            return str[::-1]
+    # @param root, a tree node
+    # @return a list of integers
+    ama=[]
+    def inorderTraversal(self, root):
+        global ama
+        if root!=None:
+            self.inorderTraversal(root.left)
+            self.ama.append(root.val)
+            self.inorderTraversal(root.right)
+        return self.ama
